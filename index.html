@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Injection Scanner - Cybersecurity Validation Tool</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Ejemplo en React (JS/TS)
+      fetch('http://localhost:5000/api/scan', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          url: 'http://ejemplo.com',
+          risk_level: 1
+        })
+      })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          // Aquí puedes mostrar el resultado en tu frontend
+        });
+    </script>
+  </body>
+</html>
